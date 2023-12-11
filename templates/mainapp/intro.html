@@ -1,0 +1,173 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Transparency and Trust Survey</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+  </head>
+  <body style="background-color: #e98801; color: white !important">
+   
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e98801">
+      <a class="navbar-brand" href="#">SECURE E2E</a>
+    </nav>
+    <div class="container  mt-2 text-white text-justify" style="background-color: #e98801;">
+      
+      <div class="row" style="border: 1px solid #e98801;">
+        <div class="col-12">
+          <p>
+            Dear participant, <br> <br>
+
+            Thank you for taking part in our study. Your opinion is very important to us, and by participating you will make a valuable 
+            contribution to our research.
+          </p>
+          <h5>What this project is about</h5>
+          <p>
+            In the study, you will be asked to vote using an Internet voting system, 
+            then view the final results, and then provide us with feedback on the system.
+            The main purpose of this study is to investigate and measure users attitudes towards an internet voting system.
+          </p>
+          <p> 
+            This survey will take approximately **15 minutes** to complete. You will be 
+            reimbursed **£2.25** for your participation. </p>
+          <p>
+            You can drop out from the survey participation at any time and your collected data will be deleted by the researchers. However, in that case you will not get the 
+            compensation for your participation from the Prolific platform. See this  
+            <a href="https://participant-help.prolific.co/hc/en-gb/articles/360022342094-How-do-I-withdraw-my-participation-in-a-study-" target="_blank">link </a> 
+            for more information on withdrawing from a study before it is completed in Prolific. 
+           <!-- <b style="color:green">Also, keep in mind that if you fail the attention checks, your submission will be rejected (and you will not be compensated).</b>-->
+           </p>
+
+          <h5>What I am agreeing to</h5>
+          <p>
+           I hereby authorize the researchers mentioned on the page to make use of the data I provide for their research project for the purpose stated above. 
+           I also authorize that my anonymized data can be used and analyzed by researchers. I have understood the nature and general purpose of the research procedure.
+          </p>
+
+          <h5>How we handle and delete the data </h5>
+          <p>
+            If a participant divulges any personal information about themselves or other persons while voting or filling out the questionnaire,
+            the researchers will remove it from the dataset and replace it with a placeholder.
+          </p>
+
+          
+          <h5>What data we collect</h5>
+          <p>
+            We will collect information about you, such as:
+            <ul>
+              <li>your age,</li>
+              <li>gender,</li>
+              <li>country of residence,</li>
+              <li>educational level and </li>
+              <li>your computer's IP address.</li>
+            </ul>
+          </p>
+          <h5>How we use the data </h5>
+          <p> 
+            These data, apart from your computer's IP address, will be used to derive statistical measures of users' attitudes towards internet voting systems.
+            The data might be referenced or quoted, but not printed in full unless it is completely anonymized, in the published research reports and other academic publications. 
+            Your computer IP address is stored seperately from your personal data.
+          </p>
+
+          <h5>Who has access to the data? </h5>
+          <p> 
+	   The researchers have access to the original data until it has been edited to replace given personal information with placeholders as to anonymize it. 
+          </p>
+
+          
+          <h5>Third Party Services </h5>
+          <p>
+           <ul>
+             <li>SurveyXact: SurveyXact, a third-party service, is used to conduct the survey. Personal information (gender, age, country of residence, 
+                 and level of education) will be collected through the questions and stored on the SurveyXact platform. 
+                 For more information, please see SurveyXact's <a target="_blabk" href="https://www.surveyxact.com/product/data-security/"> privacy statement. </a> </li>
+             <li>
+              Cookies: We also use cookies to track your progress through the study, and these cookies are deleted at the end of the study.
+
+             </li>
+           </ul> 
+          </p>
+
+
+          <h5>Researchers</h5>
+          <p>
+            For more information about the survey, feel free to contact us. <br /><br />
+
+            Samuel Agbesi, IT University of Copenhagen (sagb@itu.dk)<br />
+            Oksana Kulyk, IT University of Copenhagen (okku@itu.dk)<br />
+            Jurlind Budurush, IT University of Copenhagen (jurb@itu.dk) <br />
+            Asmita Dalela (asmita.dalela@gmail.com)
+            <br /><br />
+
+           
+            By pressing the <b>”Next”</b> button, you freely and knowingly accept that you have read and understood the provided information.
+          </p>
+          
+          <div class="row">
+            <!--<div class="col-lg-3">
+              <a id="button-1" target="_blank"  href="{% url 'mainapp:download' %}" class="btn btn-success btn-lg btn-block" role="button">
+                Download Instructions
+              </a> 
+            </div>-->
+            <div class="col-lg-3">
+              <a href="{{urlLink}}" class="btn btn-lg btn-block mb-2" role="button" style ="background-color: #7c2503 !important; color: white !important">
+                Next
+              </a> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"><\/script>')</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static 'js/sam/page_tracker.js' %}"></script>
+    
+    <script>
+     /*
+      //set the status to false
+      let clickStatus = false;
+
+      //listens to a click event and change the staus to false
+      document.querySelector('#button-1').addEventListener('click', function(){ 
+        clickStatus = true;
+        //console.log('The button was clicked! ' + clickStatus);
+      });
+
+      //fusntion that check the click status and either display an alert or allow users to proceed
+      function onClickHandler(url) {
+        if (clickStatus !=true ){
+          alert('You need to download the instructions');
+          return false;
+        }
+        else {
+          location.replace(url);
+          return true;
+        }
+      };
+     */
+    </script>
+
+  </body>
+</html>

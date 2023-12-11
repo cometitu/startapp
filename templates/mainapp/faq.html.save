@@ -1,0 +1,272 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Voting Instructions</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+  </head>
+  <body>
+   
+    <!-- Menu bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkgreen">
+      <a class="navbar-brand" href="#">SECURE E2E</a>
+    </nav>
+
+    <div class="container text-dark mt-2" style="background-color: #ffffff; border: 1px solid #008000;">
+        <div class="row" style="background-color: darkgreen; border: 1px solid #008000;">
+            <div class="col-lg-12" >
+              <h2 class="text-center text-white">FAQ</h2>
+            </div>
+        </div>
+   
+        
+        <div id="accordion" class="m-3">
+
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  How is my vote protected from modification?
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                 The Secure Voting system is End-to-End verifiable. This means that each voter can verify the following steps:
+                 <ul>
+                 <li>That the ballot has been cast correctly (using the “Verification” option available during vote casting)  </li>
+                 <li>That the cast ballot has been recorded correctly by the voting system (using the <a href="#ballot_tracker"> ballot tracker</a>)  </li>
+                 <li>That the recorded ballot has been tallied correctly (using the <a href="#ballot_tracker"> ballot tracker</a>)  </li>
+                </ul> 
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Why should I verify my vote?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                While election authorities can verify that all the recorded votes are correctly counted, only you know which candidate you want to vote for.
+		Therefore, only you can verify that your cast ballot is stored   for your preferred candidate(s). In this way, you can have additional assurance
+		that your vote is not modified even if your device or the voting system malfunctions or is manipulated.
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                 Why is verification important in general? 
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+   		 Secure E2E is designed to protect the integrity of the election process and prevent unauthorized
+    		access or modification of the election results. Verification provides an extra level of assurance
+    		for voters and the general population in the following ways:
+  		</p>
+  		<ul>
+    		<li><b>Accuracy:</b> Verification helps detect and prevent errors, malfunctions,
+      		or tampering that could compromise election results.</li>
+    		<li><b>Voter confidence:</b> Each voter has the opportunity to
+      		verify their own vote so that they know that their vote has been correctly included in the tally. </li>
+    		<li><b>Timely error detection:</b> Verification processes help identify any discrepancies or errors early on. If a
+       		voter notices a mistake or irregularity during the verification process, it can be addressed and corrected promptly.  </li>
+    		<li><b>Accountability: </b>Verification holds the election authorities accountable for maintaining accurate records and conducting
+     		a fair election. It establishes a system of checks and balances, ensuring that the voting process is conducted according to the corresponding regulations..</li>
+  		</ul>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                 How can I understand the workings of the “Verification” option work during vote casting?
+  
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+              <div class="card-body">
+		 The “Verification” option works as follows: Imagine that after you select your preferred candidate,
+   		 your ballot is put into an envelope and sealed. This corresponds to your choice being encrypted.
+    		Then, you can choose either to submit the envelope with your ballot to the digital ballot box
+    		(cast the vote) or to open the envelope to check whether it contains the vote for the correct candidate (verify).
+    		If your vote has been modified, you can detect it by verifying. If the verification did not detect any modification, 
+                you can proceed with preparing a new ballot, which you can either choose to verify again for an extra assurance or cast. 
+                Note that you need to prepare a new ballot, because as with envelopes, onc>
+
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                 How can I understand the workings of the ballot tracker?  
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+              <div class="card-body">
+                The Secure ballot tracker is like a typical tracking number, say for shipping a package, meaning that using this
+		number you can check that your package is being delivered to the correct destination. Similarly, the digital ballot
+		tracker in Secure Voting system allows you to ensure that your ballot has been recorded in the voting system without being lost in transmission. Furthermore, the ballot tracker is a cryptographic fingerprinting which ensures that the contents of your ballot have not been modified in transmission and in the tallying>
+  
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                 Is my vote secret?   
+                </button>
+              </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+              <div class="card-body">
+                The Secure Voting system takes great care to protect the secrecy of your vote. Your ballot is encrypted on your computer
+		before it is even sent to the voting system. It can only be decrypted by a set of trustees, who must combine their secret keys together.
+		The Secure Voting system uses advanced cryptographic techniques that allow combining all the encrypted votes into an encrypted tally, and only the tally is decrypted by the trustees. That means that the contents of individual votes are not revealed to anyone.
+
+  
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingNine">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Can verification be used to violate my vote secrecy?  
+                </button>
+              </h5>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+              <div class="card-body">
+                  No, verification cannot be used by anyone to find out how you voted. While the computer you use to cast your vote might learn about your choice,
+   		 verification does not introduce any additional risks to your vote secrecy.
+ 
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTen">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                Other security assurances 
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+              <div class="card-body">
+		 <p>
+   		 The Secure Voting system provides further security assurances to ensure vote integrity, vote secrecy, and system availability during the voting process. Here are some common security assurances provided by the system:
+  		</p>
+  		<ul>
+    		<li><b>Authentication and Authorization:</b> A strong authentication mechanism is in place to ensure that only
+      		eligible voters can participate. This typically involves verifying the identity of the voter
+      		through unique login credentials, digital certificates, or multi-factor authentication.
+      		The Secure E2E voting system utilizes unique login credentials as the authentication method.
+       		Authorization mechanisms grant appropriate access rights to participants,
+       		e.g. voters or election authorities, based on their roles and privileges.  </li>
+
+    		<li><b>Independent Security Audits:</b> Regular independent security audits and penetration testing
+      		are conducted to identify vulnerabilities and assess the overall security posture of the system.
+      		These audits help uncover any weaknesses or flaws that could be exploited and allow for timely remediation.  </li>
+  		</ul>
+                
+            </div>
+          </div>
+
+
+        </div> <!-- / accordion -->
+
+        		
+        <div class="row">
+          <a id="button-2"  style="margin: auto;"></a> 
+        </div>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"><\/script>')</script>    
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/sam/page_tracker.js' %}"></script>
+    <script>
+      let storedCode = localStorage.getItem("st_code");
+      if (storedCode == "UND") {
+        urlLink = "https://app3.res50.itu.dk/helios/e/boardelections/vote"
+      } else if (storedCode == "ALL") {
+        urlLink = "https://app4.res50.itu.dk/helios/e/boardelections/vote"
+      }
+
+
+
+      // Get a reference to the button element
+      var button = document.getElementById('button-2');
+      // IIFE to blink the initial text and stop after 10 seconds 
+      (function (){
+        button.setAttribute("class", "text-success");
+        button.innerHTML = 'Wait for the <b>Next</b> button to Show'
+        /*let interval = setInterval(function() {
+          button.style.visibility = (button.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 1000); // Toggle visibility every 500 milliseconds (0.5 seconds)
+
+        setTimeout(function() {
+          clearInterval(interval); // Stop the blinking interval
+          button.style.visibility = 'visible'; // Ensure text is visible after blinking stops
+        }, 10000); // Stop blinking after 5 seconds (5000 milliseconds)
+        */
+      })();
+
+
+      // Enable the button after 10 seconds (10000 milliseconds)
+      setTimeout(function() {
+        button.setAttribute("href", urlLink);
+        button.setAttribute("class", "btn btn-success btn-lg mb-3");
+        button.setAttribute("role", "button");
+        button.innerText = "Next";
+        button.onclick = null;
+      }, 10000);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Transparency and Trust Survey</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+  </head>
+  <body style="background-color: #e98801; color: white !important">
+   
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e98801">
+      <a class="navbar-brand" href="#">SECURE E2E</a>
+    </nav>
+    <div class="container text-white mt-2" style="background-color: #e98801">
+      
+      <div class="row">
+        <div class="col-12">
+          <p>
+            Dear participant, <br> <br>      
+          </p>
+          <p>
+            You have now completed the voting part of the study. You will now be forwarded to the page where you would be able to view 
+            the election results - note, in a real-world election this page will only be available after the election has ended. 
+            To move to the next stage, click “Next” </p>
+          <p>
+          
+          
+          <div class="row">
+            <div class="col-3">
+              <a href="https://res50.itu.dk/helios/elections/35ae7f5a-a166-11ed-bdff-e130b8ee647d/view"  class="btn btn-lg btn-block" role="button" id="toResults" style="background-color: #7c2503 !important; color: white !important">
+                Next
+              </a> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"><\/script>')</script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+
+        button = document.getElementById("toResults")
+        let storedCode = localStorage.getItem("st_code");
+
+        if (storedCode == "DEF") {
+          app_version = "DEF"
+        } else if (storedCode == "BAS") {
+          app_version = "BAS"
+        } else if (storedCode == "UND") {
+          app_version = "UND"
+        } else if (storedCode == "INFO") {
+          app_version = "INFO"
+        } else if (storedCode == "ALL") {
+          app_version = "ALL"
+        } else {
+          app_version = "UND"
+          //alert ("An error has occured")
+        }
+
+        urlLink =`https://res50.itu.dk/helios/elections/35ae7f5a-a166-11ed-bdff-e130b8ee647d/view?param=${app_version}`
+
+        button.setAttribute("href", urlLink);
+        button.innerText = "Next";
+        button.onclick = null;
+    </script>
+
+    
+  </body>
+</html>

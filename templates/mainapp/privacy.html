@@ -1,0 +1,183 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Voting Instructions</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+  </head>
+  <body style="background-color: #e98801; color: white !important">
+   
+    <!-- Menu bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e98801">
+      <a class="navbar-brand" href="#">SECURE E2E</a>
+    </nav>
+
+    <div class="container text-white mt-2" style="background-color: #e98801; border: 1px solid #e98801">
+        <div class="row" style="background-color: #e98801; border: 1px solid #e98801;">
+            <div class="col-lg-12" >
+              <h2 class="text-center text-white">Privacy Policy</h2>
+            </div>
+        </div>
+   
+        <div class="row">
+            
+            <div class="col-lg-12 m-2  text-left">
+                        <h3><i>Please read the following to learn more about our privacy policies:</i></h3> <br />
+			
+			<h4>Who We Are</h4>
+                        
+			<h5> <i>About Secure E2E </i></h5>
+
+			<ul>
+			<li>Secure E2E is a web-based open-audit voting system</li>
+			<li>Secure E2E prioritizes your privacy and collects only necessary information for secure elections. </li>
+			<li>Secure E2E employ multiple security measures, including independent audits, to protect the integrity, secrecy, 
+    			    and availability of the voting system. </li>
+			<li>As part of the election auditing process, certain information may be publicly available on our website 
+    			    (details below), but we don't share any other collected information.</li>
+			<li>Secure E2E do not sell your information or use external trackers or advertising that could compromise your privacy.</li>
+			</ul>
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col-lg-12 m-2  text-left">
+			<h4>Our Privacy Statement</h4><br /> 
+		         <h5> <i>Application </i></h5>
+	
+		    <p style="text-align:justify;">
+                       
+			Your personal data and privacy in your interaction with Secure E2E are taken seriously. 
+			This is why we have a privacy policy on how we handle your personal data. 
+			This Privacy Policy provides information on how we handle personal data that is collected from voters or through our platform. 
+			Personal data is data that can be associated with, or that relates to, a person and/or could be used to identify that person. We take the privacy of your personal data seriously. 
+			</p>
+										
+			<p style="text-align:justify;">
+			<b>Non-Personal Data</b>, as used in this privacy policy, is therefore any information that 
+			does not relate to a person and/or cannot be used to identify a person. When you interact 
+			with the Secure E2E platform, we may collect non-personal data. 
+			The limitations and requirements in this privacy policy on our collection, use, disclosure, 
+			transfer, and storage or retention of personal data do not apply to non-personal data.
+			</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 m-2  text-left">
+			<h4>Data That We Collect from Voters.</h4> <br>
+            
+			<h5> <i>About your data </i></h5>
+            <ul>
+			<li>Your vote on Secure E2E is considered extremely private. </li>
+			<li>Cryptographic techniques such as end-to-end homomorphic encryption and distributed secret key sharing are used to ensure 
+                            that your individual vote is never revealed to anyone.   </li>
+			<li>Only the final tally is being decrypted and published. The decryption is performed by several trustees who must work 
+                            together and combine their secret keys. No individual trustee has the power to decrypt the election results by themselves. </li>
+			
+			</ul>
+
+			<h5> <i>Personal Data That We Collect from Voters. </i></h5>
+			<ul>
+			<li>To vote, you will need to present credentials to prove your eligibility, and this will be a username and password that were generated for you to login.</li>
+			<li>For the purposes of election auditing, Secure E2E stores your name and email address.</li>
+			<li>The complete metadata of your vote: where you voted from, what time you voted, and how often you vote (only the last vote counts!), are stored in Secure E2E and may be made available to your election administrators as part of the auditing process. This is critical for ensuring a secure and trustworthy election.</li>
+			<li>If your election was made public by the administrator, then some core auditing information is made available to the public: 
+                            the fact that you voted, the time of your vote, and its tracking number. Secure E2E takes care to mask or fully hide your email address to prevent email harvesting for spam.</li>
+			</ul>
+
+			<h5> <i>Personal Data stored on Secure E2E and your rights.</i></h5><br>
+			<p style="text-align:justify;">
+                          On Secure E2E we do collect your personal data as we interact with our platform. 
+                          The data collected is at the point of casting your vote.
+			</p>
+			<p>Currently, the generic personal data we collect are:</p><br>
+			<ul>
+                <li>The name</li>
+                <li>Email address</li>
+                <li>IP address</li>
+			</ul>
+
+
+			<h5> <i>Reason for collecting personal data of the voter.</i></h5><br>
+			<ul>
+			<li>Auditing</li>
+			<li>Eligibility</li>
+			<li>Sending login credentials to voters</li>
+			<li>Sending results alerts to voters</li>
+			</ul>
+        </div>
+        </div>
+        <div class="row">
+          <a id="button-2"  style="margin: auto;"></a> 
+        </div>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"><\/script>')</script>    
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/sam/page_tracker.js' %}"></script>
+    
+    <script>
+
+      let storedCode = localStorage.getItem("st_code");
+      if (storedCode == "BAS") {
+        urlLink = "https://app8.res50.itu.dk/helios/e/boardelections/vote"
+      } else if (storedCode == "UND") {
+        urlLink = "/faq"
+      } else if (storedCode == "INFO") {
+        urlLink = "/info"
+      } else if (storedCode == "ALL") {
+        urlLink = "/info"
+      }
+
+
+      // Get a reference to the button element
+      var button = document.getElementById('button-2');
+
+      // IIFE to blink the initial text and stop after 10 seconds 
+      (function (){
+        button.setAttribute("class", "text-warning");
+        button.innerHTML = 'Wait for the <b>Next</b> button to Show'
+        /*let interval = setInterval(function() {
+          button.style.visibility = (button.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 1000); // Toggle visibility every 500 milliseconds (0.5 seconds)
+
+        setTimeout(function() {
+          clearInterval(interval); // Stop the blinking interval
+          button.style.visibility = 'visible'; // Ensure text is visible after blinking stops
+        }, 10000); // Stop blinking after 5 seconds (5000 milliseconds)
+        */
+      })();
+
+
+      // Enable the button after 10 seconds (10000 milliseconds)
+      setTimeout(function() {
+        button.setAttribute("href", urlLink);
+        button.setAttribute("class", "btn text-white btn-warning btn-lg mb-3");
+        button.setAttribute("role", "button");
+        button.innerText = "Next";
+        button.onclick = null;
+      }, 10000);
+    </script>
+
+  </body>
+</html>

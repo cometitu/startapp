@@ -1,0 +1,238 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Voting Instructions</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      a {
+        color: gold;
+      }
+      a:visited {
+        color: gold;
+      }
+
+      a:active {
+        color: gold;
+      }
+    </style>
+ 
+  </head>
+  <body style="background-color: #e98801; color: white !important">
+   
+    <!-- Menu bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e98801">
+      <a class="navbar-brand" href="#">SECURE E2E</a>
+    </nav>
+
+    <div class="container text-white mt-2" style="background-color: #e98801; border: 1px solid #e98801;">
+        <div class="row" style="background-color: #e98801; border: 1px solid #e98801;">
+            <div class="col-lg-12" >
+              <h2 class="text-center text-white">FAQ</h2>
+            </div>
+        </div>
+        
+        <div class="row mb-2">
+          	<!-- Sidebar -->
+            <div class="col-md-3 mt-2">
+              <ul class="list-group">
+                <a id="vote_protect" class="list-group-item list-group-item-action list-group-item-warning active" href="#"> How my vote is protected</a>
+                <a id="why_verify" class="list-group-item" href="#"> Why I should verify </a>
+                
+                <a id="imp_verify" class="list-group-item" href="#"> Importance of verification </a>
+                <a id="und_verify" class="list-group-item" href="#"> How verification works </a>
+
+                
+                <a id="und_tracker" class="list-group-item" href="#"> How ballot tracker works </a>
+          
+              </ul>
+              <br>
+            </div>
+	         
+            <div class="col-md-9 mt-2 text-dark">
+              <article class="card">
+                <header class="card-header">
+                  <strong id="data_header" class="d-inline-block mr-3">How is my vote protected from modification?</strong>
+                </header>
+                <div class="card-body">
+                  <div id="data_content" class="row ml-1">
+                    Secure E2E  is end-to-end verifiable, meaning that the following checks are used to detect manipulations: 
+                    <ul>
+                    <li>You can check if your vote has your preferred candidate by using “Verification” before submitting the vote. </li>
+                    <li>You can check that your vote has been correctly recorded and stored by using the “Ballot tracker” at the “Voters and Ballot tracking center”.  </li>
+                    <li>Everyone can check that the stored votes are correctly tallied via result audits published at the end of the election. </li>
+                    </ul> 
+         
+                  </div> <!-- row.// -->
+                </div> <!-- card-body .// -->
+              </article> <!-- order-group.// -->
+            </div>
+
+        </div>
+        
+
+
+        		
+        <div class="row">
+          <a id="button-2"  style="margin: auto;"></a> 
+        </div>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/sam/jquery-3.7.0.min.js' %}"><\/script>')</script>    
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/sam/page_tracker.js' %}"></script>
+    <script>
+      let storedCode = localStorage.getItem("st_code");
+      if (storedCode == "UND") {
+        urlLink = "https://app3.res50.itu.dk/helios/e/boardelections/vote"
+      } else if (storedCode == "ALL") {
+        urlLink = "https://app4.res50.itu.dk/helios/e/boardelections/vote"
+      }
+      else {
+        alert("Please, an error occurred. Contact your administrator")
+        urlLink =""
+      }
+
+      // display content into div why_verify
+      link_voteProtect = document.getElementById("vote_protect");
+      link_whyVerify = document.getElementById("why_verify");
+      link_impVerify = document.getElementById("imp_verify");
+      link_undVerify = document.getElementById("und_verify");
+      link_undTracker = document.getElementById("und_tracker");
+
+      divContainer = document.getElementById("data_content");
+      divHeader = document.getElementById("data_header")
+
+
+      link_voteProtect.addEventListener("click", function(){
+        link_voteProtect.setAttribute("class", "list-group-item list-group-item-action list-group-item-warning active");
+        link_whyVerify.setAttribute("class", "list-group-item");
+        link_impVerify.setAttribute("class", "list-group-item");
+        link_undVerify.setAttribute("class", "list-group-item");
+        link_undTracker.setAttribute("class", "list-group-item");
+
+        divHeader.innerHTML = `How is my vote protected from modification?`
+        divContainer.innerHTML = `
+        Secure E2E  is end-to-end verifiable, meaning that the following checks are used to detect manipulations: 
+        <ul>
+        <li>You can check if your vote has your preferred candidate by using “Verification” before submitting the vote. </li>
+        <li>You can check that your vote has been correctly recorded and stored by using the “Ballot tracker” at the “Voters and Ballot tracking center”.  </li>
+        <li>Everyone can check that the stored votes are correctly tallied via result audits published at the end of the election. </li>
+        </ul> 
+        `
+      });
+
+      link_whyVerify.addEventListener("click", function(){
+        link_whyVerify.setAttribute("class", "list-group-item list-group-item-action list-group-item-warning active");
+        link_voteProtect.setAttribute("class", "list-group-item");
+        link_impVerify.setAttribute("class", "list-group-item");
+        link_undVerify.setAttribute("class", "list-group-item");
+        link_undTracker.setAttribute("class", "list-group-item");
+
+        divHeader.innerHTML = `Why should I verify my vote?`
+        divContainer.innerHTML = `
+        <p>
+          If you verify your vote, you can be assured that your ballot contains your chosen candidate(s). 
+          In case someone tries to manipulate your vote you will get detect it.   
+        </p>
+        `
+      });
+
+      link_impVerify.addEventListener("click", function(){
+        link_impVerify.setAttribute("class", "list-group-item list-group-item-action list-group-item-warning active");
+        link_voteProtect.setAttribute("class", "list-group-item");
+        link_whyVerify.setAttribute("class", "list-group-item");
+        link_undVerify.setAttribute("class", "list-group-item");
+        link_undTracker.setAttribute("class", "list-group-item");
+
+        divHeader.innerHTML = `Why is verification important in general? `
+        divContainer.innerHTML = `
+   
+        <ul>
+          <li>It increases the accuracy of the election result as it helps in detecting and preventing errors. </li>
+          <li>It provides confidence to the voter as each voter can see that their vote contains their chosen candidate </li>
+          <li>It helps in identifying discrepancies or irregularities early on. If the voter finds a mistake during the 
+            verification process it can be corrected promptly.  </li>
+          <li>It makes the election authorities accountable for maintaining accurate records and conducting a fair election.  </li>
+        </ul>
+        `
+      });
+
+      link_undVerify.addEventListener("click", function(){
+        link_undVerify.setAttribute("class", "list-group-item list-group-item-action list-group-item-warning active");
+        link_voteProtect.setAttribute("class", "list-group-item");
+        link_whyVerify.setAttribute("class", "list-group-item");
+        link_impVerify.setAttribute("class", "list-group-item");
+        link_undTracker.setAttribute("class", "list-group-item");
+
+        divHeader.innerHTML = `How can I understand the workings of the “Verification” option work during vote casting?`
+        divContainer.innerHTML = `
+            <img class="img-fluid" src="{% static 'images/1.png' %}">
+        `
+      });
+
+      link_undTracker.addEventListener("click", function(){
+        link_undTracker.setAttribute("class", "list-group-item list-group-item-action list-group-item-warning active");
+        link_undVerify.setAttribute("class", "list-group-item");
+        link_voteProtect.setAttribute("class", "list-group-item");
+        link_whyVerify.setAttribute("class", "list-group-item");
+        link_impVerify.setAttribute("class", "list-group-item");
+        divHeader.innerHTML = `How does “Ballot tracker” work? `
+        divContainer.innerHTML = `
+        <img class="img-fluid" src="{% static 'images/2.png' %}">
+        `
+      });
+  
+
+
+
+      // Get a reference to the button element
+      var button = document.getElementById('button-2');
+      // IIFE to blink the initial text and stop after 10 seconds 
+      (function (){
+        button.setAttribute("class", "text-warning");
+	//button.setAttribute("style", "background-color: #7c2503 !important; color: white !important");
+        button.innerHTML = 'Wait for the <b style="background-color: #7c2503 !important; color: white !important">Next</b> button to Show'
+        /*let interval = setInterval(function() {
+          button.style.visibility = (button.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 1000); // Toggle visibility every 500 milliseconds (0.5 seconds)
+
+        setTimeout(function() {
+          clearInterval(interval); // Stop the blinking interval
+          button.style.visibility = 'visible'; // Ensure text is visible after blinking stops
+        }, 10000); // Stop blinking after 5 seconds (5000 milliseconds)
+        */
+      })();
+
+
+      // Enable the button after 10 seconds (10000 milliseconds)
+      setTimeout(function() {
+        button.setAttribute("href", urlLink);
+        button.setAttribute("class", "btn-warning btn btn-lg mb-3");
+        button.setAttribute("role", "button");
+        button.innerText = "Next";
+        button.onclick = null;
+      }, 10000);
+    </script>
+
+  </body>
+</html>
+
